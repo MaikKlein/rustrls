@@ -68,7 +68,10 @@
     (progn
       (spacemacs/set-leader-keys-for-major-mode 'rust-mode
         "=" 'rust-format-buffer
-        "q" 'spacemacs/rust-quick-run))))
+        "q" 'spacemacs/rust-quick-run)
+
+      (evil-define-key 'insert rust-mode-map
+        (kbd ".") 'rustrls/completing-dot))))
 
 (defun rustrls/init-toml-mode ()
   (use-package toml-mode
