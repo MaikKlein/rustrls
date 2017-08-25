@@ -11,6 +11,6 @@
 
 ;; Variables
 
-(spacemacs|defvar-company-backends rust-mode)
-
 (spacemacs|define-jump-handlers rust-mode)
+
+(defvar rustrls-lsp-mode-hook 'lsp-mode)
